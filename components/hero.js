@@ -4,7 +4,7 @@ const profileImage =
 export default function Hero() {
   return (
     <header className="px-6">
-      <div className="max-w-4xl mx-auto flex gap-14 items-center">
+      <div className="max-w-4xl mx-auto flex flex-col-reverse md:flex-row gap-14 items-center">
         <div>
           <h1 className="text-3xl font-bold mb-6">
             Hi, I'm Darren <br /> Software Engineer

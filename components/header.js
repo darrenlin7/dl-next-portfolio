@@ -1,6 +1,12 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+const routes = ["Blog", "Work", "Contact"];
+
 export default function Header() {
+  const router = useRouter();
   return (
-    <header className="container mx-auto flex justify-between h-24 items-center">
+    <header className="container mx-auto flex justify-between h-24 items-center px-6 md:px-0">
       <a className="" href="/">
         <svg
           aria-label="Daily Dev Tips logo"
@@ -24,11 +30,19 @@ export default function Header() {
       </a>
       <nav className="">
         <ul className="flex gap-6 font-medium">
-          <li className="" href="#">
-            Work
-          </li>
-          <li href="#">Blog</li>
-          <li href="#">Contact</li>
+          {routes.map((route) => {
+            return (
+              <li
+                key={route}
+                className={`hover:underline ${
+                  router.pathname === `/${route.toLowerCase()}` &&
+                  "text-red-400"
+                }`}
+              >
+                <a href={`${route.toLowerCase()}`}>{route}</a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </header>
