@@ -4,9 +4,9 @@ const profileImage =
 export default function Hero() {
   return (
     <header className="px-6">
-      <div className="max-w-4xl mx-auto flex gap-14">
+      <div className="max-w-4xl mx-auto flex gap-14 items-center">
         <div>
-          <h1 className="font-bold text-3xl mb-6">
+          <h1 className="text-3xl font-bold mb-6">
             Hi, I'm Darren <br /> Software Engineer
           </h1>
           <p className="text-lg mb-6">
@@ -16,7 +16,7 @@ export default function Hero() {
           </p>
           <a
             href="#"
-            className="bg-red-400 px-6 py-3 rounded text-white text-lg hover:bg-red-600"
+            className="bg-red-400 text-white px-6 py-3 text-lg rounded hover:bg-red-600"
           >
             Check out my work
           </a>
