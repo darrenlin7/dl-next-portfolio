@@ -39,7 +39,7 @@ export default function Header() {
                   "text-red-400"
                 }`}
               >
-                <a href={`${route.toLowerCase()}`}>{route}</a>
+                <Link href={`/${route.toLowerCase()}`}>{route}</Link>
               </li>
             );
           })}
